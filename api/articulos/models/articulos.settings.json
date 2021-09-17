@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "articulos",
+  "info": {
+    "name": "Articulos",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "titulo": {
+      "type": "string"
+    },
+    "descripcion": {
+      "type": "richtext"
+    },
+    "precio": {
+      "type": "float"
+    },
+    "imagen": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    }
+  }
+}
